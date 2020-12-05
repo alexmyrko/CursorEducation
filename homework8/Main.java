@@ -33,8 +33,9 @@ public class Main {
         List<Car> carsFilteredByMileage = carsFilteredByYear.stream().filter(car -> car.getMileage() < 40000).collect(Collectors.toList());
         System.out.println("Cars filtered by brand, not older than 2018 and with mileage less than 40000:");
         printCars(carsFilteredByMileage);
-        List<Car> carsSortedByPrice = carsFilteredByMileage.stream().sorted(Comparator.comparingInt(Car::getPrice)).collect(Collectors.toList());
+        List<Car> carsSortedByPrice = carsFilteredByMileage.stream().sorted(Comparator.comparingInt(Car::getPrice).reversed()).collect(Collectors.toList());
         System.out.println("Cars filtered by brand, not older than 2018 with mileage less than 40000 and sorted by price: ");
+
         printCars(carsSortedByPrice);
         cars = carsSortedByPrice.stream().limit(3).collect(Collectors.toList());
         System.out.println("3 cheapest cars filtered by brand, not older than 2018 with mileage less than 40000 and sorted by price: ");
