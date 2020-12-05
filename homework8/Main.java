@@ -6,15 +6,11 @@ import java.util.stream.Collectors;
 public class Main {
     static List<Car> carsList = new ArrayList<>();
     static Map<UUID, Car> carsMap = new LinkedHashMap<>();
+
     public static void main(String[] args) {
         CarGenerator carGenerator = new CarGenerator();
         for (int i = 0; i < 500; i++) {
-            UUID id = carGenerator.generateId();
-            Brand brand = carGenerator.generateBrand();
-            int year = carGenerator.generateYear();
-            int price = carGenerator.generatePrice();
-            int mileage = carGenerator.generateMileage();
-            carsList.add(new Car(id, brand, year, mileage, price));
+            carsList.add(carGenerator.generateCar());
         }
 
         List<Car> selectedCars = getCars(carsList);
