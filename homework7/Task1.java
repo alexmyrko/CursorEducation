@@ -2,10 +2,12 @@ package homework7;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Task1 {
     public static void main(String[] args) {
-        stringDiscovery("A piece of Text, which has digits like 25 and 37. The end!");
+        stringDiscovery("A piece of Text, which has digits like 25 and 37. А тепер, мабуть, трішки кирилиці:) The end!");
     }
 
     public static void stringDiscovery(String text) {
@@ -24,9 +26,13 @@ public class Task1 {
                 digits++;
             else if (Character.isSpaceChar(ch))
                 spaces++;
-            else punctuation++;
-
         }
+
+        Pattern pattern = Pattern.compile("[\\p{P}\\p{S}]");
+        Matcher matcher = pattern.matcher(text);
+        while (matcher.find())
+            punctuation++;
+
         System.out.println("Text: " + text);
         System.out.println("Letters: " + letters);
         System.out.println("Letters: " + letters.size());
