@@ -36,7 +36,7 @@ public class Task2 {
                 int count = 0;
                 for (int i = 0; i < line.length(); i++) {
                     Character ch = line.charAt(i);
-                    if (Character.isLetter(ch)) {
+                    if (Character.isLetter(ch) || (ch == '-' && count != 0)) {
                         if (i == line.length() - 1){
                             word = line.substring(i - count, i + 1).toLowerCase();
                             putWordToMap(wordsMap, word);
