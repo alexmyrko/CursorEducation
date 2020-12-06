@@ -15,7 +15,7 @@ public class CarGenerator {
     }
 
     private int generateYear(){
-        int minYear = 1960;
+        int minYear = 1998;
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         return minYear + new Random().nextInt(currentYear - minYear);
     }
@@ -27,7 +27,7 @@ public class CarGenerator {
     }
 
     private int generateMileage(){
-        return new Random().nextInt(1_000_000);
+        return new Random().nextInt(400_000);
     }
 
     public Car generateCar(){

@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         CarGenerator carGenerator = new CarGenerator();
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 1500; i++) {
             carsList.add(carGenerator.generateCar());
         }
 
@@ -27,7 +27,7 @@ public class Main {
         List<Car> carsFilteredByBrand = allCars.stream().filter(car -> car.getBrand() == Brand.TESLA || car.getBrand() == Brand.AUDI).collect(Collectors.toList());
         System.out.println("Cars filtered by brand:");
         printCars(carsFilteredByBrand);
-        List<Car> carsFilteredByYear =  carsFilteredByBrand.stream().filter(car -> car.getYear() < 2018).collect(Collectors.toList());
+        List<Car> carsFilteredByYear =  carsFilteredByBrand.stream().filter(car -> car.getYear() >= 2018).collect(Collectors.toList());
         System.out.println("Cars filtered by brand and not older than 2018:");
         printCars(carsFilteredByYear);
         List<Car> carsFilteredByMileage = carsFilteredByYear.stream().filter(car -> car.getMileage() < 40000).collect(Collectors.toList());
