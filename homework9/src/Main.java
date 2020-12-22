@@ -7,11 +7,10 @@ import java.util.Random;
  */
 public class Main {
     public static void main(String[] args) {
-        String initial = "Some text";
-        List<String> list = new ArrayList<>();
+        StringBuilder stringBuilder = new StringBuilder("Some random text");
+        String text = "";
         while(true){
-            String text = initial.concat(String.valueOf(new Random().nextDouble()));
-            list.add(text.substring(0,4));
+           stringBuilder.append("Another piece of text");
         }
     }
 }
