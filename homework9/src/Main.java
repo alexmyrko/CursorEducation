@@ -8,7 +8,6 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         StringBuilder stringBuilder = new StringBuilder("Some random text");
-        String text = "";
         while(true){
            stringBuilder.append("Another piece of text");
         }
