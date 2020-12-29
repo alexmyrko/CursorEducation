@@ -1,3 +1,5 @@
+#!D:/JAVA/jdk-15.0.1/bin/java --source 14
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
