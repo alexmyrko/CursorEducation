@@ -1,6 +1,5 @@
-/**
- * Created by Alex on 22.12.2020.
- */
+package homework9;
+
 public class Main {
     public static void main(String[] args) {
         StringBuilder stringBuilder = new StringBuilder("Some random text");

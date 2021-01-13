@@ -1,4 +1,6 @@
 // Homework 11.   Oleksandr Myrko
+package homework11;
+
 import java.util.concurrent.ForkJoinPool;
 
 public class Solution {

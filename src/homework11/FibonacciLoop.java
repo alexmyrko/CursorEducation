@@ -1,3 +1,5 @@
+package homework11;
+
 public class FibonacciLoop {
     long n1;
     long n2;
